@@ -66,7 +66,8 @@ def main():
         ##@ResearchIT PAGE/ SECTION 1 (Title: Input File)
 
         #@ResearchIT, this is the part where we give user an option to either download or upload the file so next line will be optional if user selects to upload the file.
-        #mol=molecule.download_structure(ARGS.pdbid,filename)
+        if (ARGS.pdbid is not None):
+            mol=molecule.download_structure(ARGS.pdbid,filename)
 
         mol=molecule.load_structure(filename)
 
