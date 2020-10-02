@@ -25,14 +25,14 @@ def IO():
     parser.add_argument('hngfile', metavar='HNG', help='Path and filename of the corresponding HNG file.')
 
     parser.add_argument("--chain", help='Enter The Chain ID')
-    parser.add_argument("--dr", default=15, help='Distance cutoff for the ANM.')
-    parser.add_argument("--power", default=0, help='Power of the distance in non-parametric ANM.')
+    parser.add_argument("--dr", type=float, default=15, help='Distance cutoff for the ANM.')
+    parser.add_argument("--power", type=float, default=0, help='Power of the distance in non-parametric ANM.')
     parser.add_argument("--mass", default='residue', help='Mass of the residue; unit or molecular weight')
 
 
-    parser.add_argument("--scale", default=2, help='movie scale')
-    parser.add_argument("--frames", default=10, help='number of frames')
-    parser.add_argument("--modes", default=10, help='how many modes')
+    parser.add_argument("--scale", type=int, default=2, help='movie scale')
+    parser.add_argument("--frames", type=int, default=10, help='number of frames')
+    parser.add_argument("--modes", type=int, default=10, help='how many modes')
 
     # web server parameters
     web_server_group = parser.add_argument_group('Web server parameters', 'Used by the web form')
